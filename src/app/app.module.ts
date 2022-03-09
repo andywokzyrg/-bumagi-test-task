@@ -9,6 +9,9 @@ import { EditPageComponent } from './edit-page/edit-page.component';
 import {InputModule} from "./shared/ui/input/input.module";
 import {ButtonModule} from "./shared/ui/button/button.module";
 import {UserItemModule} from "./shared/components/user-item/user-item.module";
+import {PasswordInputModule} from "./shared/ui/password-input/password-input.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,9 +23,13 @@ import {UserItemModule} from "./shared/components/user-item/user-item.module";
     imports: [
         BrowserModule,
         AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
         InputModule,
         ButtonModule,
-        UserItemModule
+        UserItemModule,
+        PasswordInputModule
     ],
   providers: [],
   bootstrap: [AppComponent]

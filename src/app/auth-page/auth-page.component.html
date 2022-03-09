@@ -1,4 +1,8 @@
 <div class="container">
-    <app-input></app-input>
-    <app-button>ВОЙТИ</app-button>
+    <form class="content" [formGroup]="form" (ngSubmit)="submit()">
+        <app-input formControlName="login"></app-input>
+        <app-password-input placeholder="Password" formControlName="password"></app-password-input>
+        <app-button type="submit">ВОЙТИ</app-button>
+    </form>
 </div>
+

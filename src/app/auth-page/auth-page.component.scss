@@ -6,3 +6,10 @@
     vertical-align: center;
     flex-direction: column;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 240px;
+}
