@@ -1,0 +1,48 @@
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+.left-side-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side-content {
+    display: flex;
+    margin-right: 30px;
+    gap: 54px;
+    align-items: center;
+}
+
+.user-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    margin-left: 16px;
+}
+
+.balance {
+    margin-left: 44px;
+}
+
+img {
+    border-radius: 64px;
+}
+
+option {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.last-change {
+
+}
+

@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-Black.ttf') format('ttf'),
+    url('assets/fonts/Inter-Bold.ttf') format('ttf'),
+    url('assets/fonts/Inter-Extrabold.ttf') format('ttf'),
+    url('assets/fonts/Inter-ExtraLight.ttf') format('ttf'),
+    url('assets/fonts/Inter-Light.ttf') format('ttf'),
+    url('assets/fonts/Inter-Medium.ttf') format('ttf'),
+    url('assets/fonts/Inter-Regular.ttf') format('ttf'),
+    url('assets/fonts/Inter-Semibold.ttf') format('ttf'),
+    url('assets/fonts/Inter-Thin.ttf') format('ttf')
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+}
