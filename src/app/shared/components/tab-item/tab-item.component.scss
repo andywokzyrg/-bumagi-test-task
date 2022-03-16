@@ -1,0 +1,23 @@
+input {
+    display: none;
+}
+
+input:checked + .line {
+    visibility: visible;
+}
+
+label {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.radio-container {
+    display: inline-block;
+}
+
+.line {
+    background: #6979F8;
+    height: 3px;
+    visibility: hidden;
+}

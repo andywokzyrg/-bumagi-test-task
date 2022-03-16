@@ -3,8 +3,9 @@
 }
 
 .header {
-    height: 50px;
     background: #FFFFFF;
+    display: flex;
+    align-items: center;
 }
 
 .content {
@@ -12,4 +13,8 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+.header-content {
+    margin-left: 48px;
 }

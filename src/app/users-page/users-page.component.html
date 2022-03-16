@@ -1,8 +1,13 @@
 <div class="container">
     <header class="header">
-
+        <div class="header-content">
+            <app-tab-item [id]="'all'" [for]="'all'" [checked]="true" (change)="getAllUsers()" >Все</app-tab-item>
+            <app-tab-item [id]="'blocked'" [for]="'blocked'">Заблокированные</app-tab-item>
+            <app-tab-item [id]="'active'" [for]="'active'">Активные</app-tab-item>
+        </div>
     </header>
     <div class="content">
+        <app-notification-item [src]="'assets/auth-required.svg'">Authorization required</app-notification-item>
         <app-user-item class="user-item"></app-user-item>
         <app-user-item></app-user-item>
     </div>
