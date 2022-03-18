@@ -13,3 +13,29 @@
     gap: 24px;
     width: 240px;
 }
+
+.notification {
+    position: absolute;
+    display: none;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+}
+
+.error {
+    display: block;
+    animation-name: showError;
+    animation-duration: 1s;
+    opacity: 100%;
+}
+
+@keyframes showError {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+

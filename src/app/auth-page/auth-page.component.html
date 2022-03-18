@@ -4,5 +4,7 @@
         <app-password-input placeholder="Password" formControlName="password"></app-password-input>
         <app-button type="submit">ВОЙТИ</app-button>
     </form>
+    <app-notification-item [ngClass]="{error: isErrorVisible}" (click)="hideError()" class="notification error" [src]="'assets/auth-required.svg'">Invalid data</app-notification-item>
 </div>
+
 

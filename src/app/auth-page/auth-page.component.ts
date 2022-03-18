@@ -1,4 +1,4 @@
-import {Component, forwardRef, OnInit} from '@angular/core';
+import {Component, forwardRef} from '@angular/core';
 import {FormBuilder, NG_VALUE_ACCESSOR, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
 import {User} from "../shared/interfaces";
@@ -14,7 +14,9 @@ import {Router} from "@angular/router";
         multi: true
     }]
 })
-export class AuthPageComponent implements OnInit {
+export class AuthPageComponent {
+    isErrorVisible: boolean = false
+
     constructor(private auth: AuthService, private router: Router, private fb: FormBuilder) {
     }
 
@@ -23,8 +25,13 @@ export class AuthPageComponent implements OnInit {
         password: ['', Validators.required]
     })
 
-    ngOnInit(): void {
+    showError() {
+        this.form.reset()
+        this.isErrorVisible = true
+    }
 
+    hideError() {
+        this.isErrorVisible = false
     }
 
     submit() {
@@ -36,6 +43,6 @@ export class AuthPageComponent implements OnInit {
         this.auth.login(user).subscribe(() => {
             this.form.reset()
             this.router.navigate(['users'])
-        }, () => this.form.reset())
+        }, () => this.showError())
     }
 }
