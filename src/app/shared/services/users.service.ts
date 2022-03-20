@@ -8,6 +8,6 @@ export class UsersService {
     }
 
     getAll(): Observable<any> {
-        return this.http.get('https://bumagi-frontend-test.herokuapp.com/users?status=1')
+        return this.http.get('https://bumagi-frontend-test.herokuapp.com/users?status=1', {observe: 'response'})
     }
 }

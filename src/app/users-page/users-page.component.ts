@@ -16,7 +16,8 @@ export class UsersPageComponent implements OnInit {
     }
 
     getAllUsers() {
-        this.usersService.getAll().subscribe(response => this.users = response)
-        console.log(this.users)
+        this.usersService.getAll().subscribe(response => {
+            console.log(response)
+        })
     }
 }

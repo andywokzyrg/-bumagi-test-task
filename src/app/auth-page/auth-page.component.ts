@@ -1,5 +1,5 @@
-import {Component, forwardRef} from '@angular/core';
-import {FormBuilder, NG_VALUE_ACCESSOR, Validators} from "@angular/forms";
+import {Component} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
 import {User} from "../shared/interfaces";
 import {Router} from "@angular/router";
@@ -7,12 +7,7 @@ import {Router} from "@angular/router";
 @Component({
     selector: 'app-auth-page',
     templateUrl: './auth-page.component.html',
-    styleUrls: ['./auth-page.component.scss'],
-    providers: [{
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => AuthPageComponent),
-        multi: true
-    }]
+    styleUrls: ['./auth-page.component.scss']
 })
 export class AuthPageComponent {
     isErrorVisible: boolean = false
