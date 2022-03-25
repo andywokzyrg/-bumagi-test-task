@@ -1,4 +1,4 @@
-import {Component, forwardRef, OnInit} from '@angular/core';
+import {Component, forwardRef, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
@@ -17,6 +17,8 @@ export class InputComponent implements OnInit, ControlValueAccessor {
     input = new FormControl()
     onChange: any
     onTouch: any
+    @Input() placeholder!: string;
+    @Input() width!: number;
 
     constructor() {
     }

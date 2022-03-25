@@ -1,0 +1,53 @@
+.container {
+    background: #FFFFFF;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 7px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.header-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+hr {
+    border: 1px solid #ECEBED;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    gap: 30px;
+
+    &.last {
+        justify-content: flex-end;
+    }
+}
+
+.third-item {
+    flex-basis: 33.33%;
+}
+
+.single-item {
+    flex-basis: calc(33.33% - 20px);
+}
+
+.lines-container {
+    flex-grow: 1;
+}

@@ -1,1 +1,24 @@
-<p>edit-page works!</p>
+<div class="container">
+    <div class="header">
+        <span class="header-text">Иванов Иван</span>
+        <img src="assets/close.svg" alt="close">
+    </div>
+    <hr>
+    <div class="content">
+        <div class="lines-container">
+            <div class="line">
+                <app-input class="third-item" [placeholder]="'Иванов'"></app-input>
+                <app-input class="third-item" [placeholder]="'Иван'"></app-input>
+                <app-input class="third-item" [placeholder]="'Петров'"></app-input>
+            </div>
+            <div class="line">
+                <app-input class="single-item" [placeholder]="'Подписка активна'"></app-input>
+            </div>
+        </div>
+        <div class="lines-container">
+            <div class="last line">
+                <app-button class="single-item">Сохранить</app-button>
+            </div>
+        </div>
+    </div>
+</div>
