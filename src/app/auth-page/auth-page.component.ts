@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
-import {User} from "../shared/interfaces";
+import {LoginData} from "../shared/interfaces";
 import {Router} from "@angular/router";
 
 @Component({
@@ -30,7 +30,7 @@ export class AuthPageComponent {
     }
 
     submit() {
-        const user: User = {
+        const user: LoginData = {
             login: this.form.value.login,
             password: this.form.value.password
         }

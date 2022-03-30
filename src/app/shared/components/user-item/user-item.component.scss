@@ -5,32 +5,28 @@
     padding: 16px;
     border-radius: 4px;
     background: #FFFFFF;
+    cursor: pointer;
 }
 
 .left-side-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .right-side-content {
     display: flex;
-    margin-right: 30px;
-    gap: 54px;
     align-items: center;
+    justify-content: left;
 }
 
 .user-info-container {
     display: flex;
     align-items: center;
+    width: 300px;
 }
 
 .name {
     margin-left: 16px;
-}
-
-.balance {
-    margin-left: 44px;
 }
 
 img {
@@ -46,3 +42,8 @@ option {
     color: #A8A8A8;
 }
 
+.status {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}

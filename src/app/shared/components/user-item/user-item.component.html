@@ -1,14 +1,18 @@
 <div class="user-item">
     <div class="left-side-content">
         <div class="user-info-container">
-            <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="avatar" height="48px" width="48px">
-            <span class="name">Сергей Раев</span>
+            <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="avatar" height="48px" width="48px">
+            <span class="name">{{user.fname + ' ' + user.name.substring(0, 1) + '. ' + user.mname.substring(0, 1) + '.'}}</span>
         </div>
-        <span class="balance">Баланс: 3481.6</span>
+        <div>
+            <span class="balance">Баланс: {{user.balance | number: '0.2-2'}}</span>
+        </div>
     </div>
 
     <div class="right-side-content">
-        <span class="last-change">Последнее изменение: 10 секунд назад</span>
-        <span>Заблокирован</span>
+        <div><span class="last-change">Последнее изменение: {{user.lastUpdatedAt | date:'medium'}}</span></div>
+        <div class="status">
+            <span>{{currentStatus}}</span>
+        </div>
     </div>
 </div>

@@ -14,6 +14,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TabItemModule} from "./shared/components/tab-item/tab-item.module";
 import {NotificationItemModule} from "./shared/components/notification-item/notification-item.module";
 import {AuthInterceptor} from "./shared/auth.interceptor";
+import { PreloaderComponent } from './shared/components/preloader/preloader.component';
 
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
@@ -27,6 +28,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
         AuthPageComponent,
         UsersPageComponent,
         EditPageComponent,
+        PreloaderComponent,
     ],
     imports: [
         BrowserModule,

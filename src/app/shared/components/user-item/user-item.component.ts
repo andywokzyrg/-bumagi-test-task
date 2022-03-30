@@ -1,4 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {User} from "../../interfaces";
+
+export enum LoadedUserTypes {
+    Active = 0,
+    Stopped = 1,
+    Blocked = 2,
+    All = 3
+}
 
 @Component({
     selector: 'app-user-item',
@@ -6,14 +14,25 @@ import {Component, Input, OnInit} from '@angular/core';
     styleUrls: ['./user-item.component.scss']
 })
 export class UserItemComponent implements OnInit {
-    @Input() avatar: string | undefined
-    @Input() username: string | undefined
-    @Input() balance: string | undefined
+    @Input() user!: User
+    currentStatus!: string
 
     constructor() {
     }
 
     ngOnInit(): void {
+        this.changeCurrentStatus()
+    }
+
+    changeCurrentStatus() {
+        switch (this.user.status) {
+            case 0: this.currentStatus = 'Активен'
+                break
+            case 1: this.currentStatus = 'Приостановлен'
+                break
+            case 2: this.currentStatus = 'Заблокирован'
+                break
+        }
     }
 
 }

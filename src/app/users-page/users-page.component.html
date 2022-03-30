@@ -1,13 +1,15 @@
 <div class="container">
     <header class="header">
         <div class="header-content">
-            <app-tab-item [id]="'all'" [for]="'all'" [checked]="true" (change)="getAllUsers()" >Все</app-tab-item>
-            <app-tab-item [id]="'blocked'" [for]="'blocked'">Заблокированные</app-tab-item>
-            <app-tab-item [id]="'active'" [for]="'active'">Активные</app-tab-item>
+            <app-tab-item [id]="'all'" [for]="'all'" [checked]="true" (change)="showAllUsers()">Все</app-tab-item>
+            <app-tab-item [id]="'blocked'" [for]="'blocked'" (change)="showBlockedUsers()">Заблокированные</app-tab-item>
+            <app-tab-item [id]="'active'" [for]="'active'" (change)="showActiveUsers()">Активные</app-tab-item>
         </div>
     </header>
-    <div class="content">
-        <app-user-item class="user-item" (click)="getAllUsers()"></app-user-item>
-        <app-user-item></app-user-item>
+    <div class="content" *ngIf="users$ | async as users; else preloader">
+        <app-user-item class="user-item" *ngFor="let user of users" [user]="user"></app-user-item>
     </div>
+    <ng-template #preloader class="preloader">
+        <app-preloader></app-preloader>
+    </ng-template>
 </div>

@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {User} from "../interfaces";
+import {LoginData} from "../interfaces";
 import {tap} from "rxjs";
 
 @Injectable({providedIn: 'root'})
@@ -11,7 +11,7 @@ export class AuthService {
 
     token!: string | null
 
-    login(user: User): any {
+    login(user: LoginData): any {
         return this.http.post('https://bumagi-frontend-test.herokuapp.com/auth', user, {observe: 'response'})
             .pipe(
                 tap(response => {
@@ -19,7 +19,5 @@ export class AuthService {
                     localStorage.setItem('Authorization', this.token)
                 })
             )
-
-
     }
 }
