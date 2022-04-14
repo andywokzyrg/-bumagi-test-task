@@ -16,6 +16,7 @@ import {NotificationItemModule} from "./shared/components/notification-item/noti
 import {AuthInterceptor} from "./shared/auth.interceptor";
 import { PreloaderComponent } from './shared/components/preloader/preloader.component';
 import {OverlayModule} from "@angular/cdk/overlay";
+import { EditPageEnvComponent } from './edit-page-env/edit-page-env.component';
 
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
@@ -30,6 +31,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
         UsersPageComponent,
         EditPageComponent,
         PreloaderComponent,
+        EditPageEnvComponent,
     ],
     imports: [
         BrowserModule,
