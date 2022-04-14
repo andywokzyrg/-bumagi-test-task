@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsersService} from "../shared/services/users.service";
 import {Observable} from "rxjs";
 import {User} from "../shared/interfaces";
+import {EditPageOverlayService} from "../shared/services/edit-page-overlay.service";
 
 @Component({
     selector: 'app-users-page',
@@ -11,7 +12,11 @@ import {User} from "../shared/interfaces";
 export class UsersPageComponent implements OnInit {
     users$: Observable<User[]> | undefined
 
-    constructor(private usersService: UsersService) {
+    constructor(private usersService: UsersService, private overlay: EditPageOverlayService) {
+    }
+
+    openOverlay() {
+        this.overlay.open()
     }
 
     ngOnInit(): void {

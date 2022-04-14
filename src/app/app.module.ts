@@ -15,6 +15,7 @@ import {TabItemModule} from "./shared/components/tab-item/tab-item.module";
 import {NotificationItemModule} from "./shared/components/notification-item/notification-item.module";
 import {AuthInterceptor} from "./shared/auth.interceptor";
 import { PreloaderComponent } from './shared/components/preloader/preloader.component';
+import {OverlayModule} from "@angular/cdk/overlay";
 
 const INTERCEPTOR_PROVIDER: Provider = {
     provide: HTTP_INTERCEPTORS,
@@ -41,7 +42,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
         UserItemModule,
         PasswordInputModule,
         TabItemModule,
-        NotificationItemModule
+        NotificationItemModule,
+        OverlayModule
     ],
     providers: [INTERCEPTOR_PROVIDER],
     bootstrap: [AppComponent]

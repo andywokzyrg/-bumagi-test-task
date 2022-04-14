@@ -7,7 +7,7 @@
         </div>
     </header>
     <div class="content" *ngIf="users$ | async as users; else preloader">
-        <app-user-item class="user-item" *ngFor="let user of users" [user]="user"></app-user-item>
+        <app-user-item class="user-item" *ngFor="let user of users" [user]="user" (click)="openOverlay()"></app-user-item>
     </div>
     <ng-template #preloader class="preloader">
         <app-preloader></app-preloader>

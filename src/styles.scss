@@ -1,3 +1,5 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
 @font-face {
     font-family: 'Inter';
     src: url('assets/fonts/Inter-Black.ttf') format('ttf'),
@@ -81,4 +83,8 @@ select {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+.dark-backdrop {
+    background: rgba(128, 128, 128, 0.5);
 }
