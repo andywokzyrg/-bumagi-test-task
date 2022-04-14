@@ -4,15 +4,15 @@
         <img src="assets/close.svg" alt="close" class="close-button" (click)="closeOverlay()">
     </div>
     <hr>
-    <div class="content">
+    <form class="content" [formGroup]="form" (ngSubmit)="submit()">
         <div class="lines-container">
             <div class="line">
-                <app-input class="third-item" [placeholder]="'Иванов'"></app-input>
-                <app-input class="third-item" [placeholder]="'Иван'"></app-input>
-                <app-input class="third-item" [placeholder]="'Петров'"></app-input>
+                <app-input class="third-item" [placeholder]="'Иванов'" formControlName="fname"></app-input>
+                <app-input class="third-item" [placeholder]="'Иван'" formControlName="name"></app-input>
+                <app-input class="third-item" [placeholder]="'Петров'" formControlName="mname"></app-input>
             </div>
             <div class="line">
-                <app-input class="single-item" [placeholder]="'Подписка активна'"></app-input>
+                <app-input class="single-item" [placeholder]="'Подписка активна'" formControlName="status"></app-input>
             </div>
         </div>
         <div class="lines-container">
@@ -20,5 +20,5 @@
                 <app-button class="single-item">Сохранить</app-button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
